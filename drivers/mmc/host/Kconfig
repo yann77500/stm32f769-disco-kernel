@@ -396,6 +396,14 @@ config MMC_OMAP
 	  say Y or M here.
 
 	  If unsure, say N.
+	  
+config MMC_STM32_SDMMC
+	tristate "STMicroelectronics STM32 SD/MMC Host Controller support"
+	depends on ARCH_STM32 && OF
+	help
+	  This selects support for the SD/MMC controller on STM32 SoCs.
+	  If you have a board based on such a SoC and with a SD/MMC slot,
+	  say Y or M here.
 
 config MMC_OMAP_HS
 	tristate "TI OMAP High Speed Multimedia Card Interface support"
